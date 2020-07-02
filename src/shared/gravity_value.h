@@ -527,6 +527,27 @@ GRAVITY_API gravity_value_t     gravity_value_from_null(void);
 GRAVITY_API gravity_value_t     gravity_value_from_undefined(void);
 GRAVITY_API gravity_value_t     gravity_value_from_bool(bool b);
 
+GRAVITY_API bool                gravity_value_isa_function(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_instance(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_closure(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_fiber(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_class(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_string(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_int(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_float(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_bool(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_list(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_map(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_range(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_basic_type(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_nullclass(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_null(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_undefined(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_callable(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_valid(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_notvalid(gravity_value_t v);
+GRAVITY_API bool                gravity_value_isa_error(gravity_value_t v);
+
 // MARK: - OBJECT -
 GRAVITY_API void                gravity_object_serialize (gravity_object_t *obj, json_t *json);
 GRAVITY_API gravity_object_t    *gravity_object_deserialize (gravity_vm *vm, json_value *entry);

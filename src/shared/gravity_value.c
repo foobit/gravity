@@ -2466,3 +2466,83 @@ inline gravity_value_t gravity_value_from_undefined(void) {
 inline gravity_value_t gravity_value_from_bool(bool b) {
     return ((gravity_value_t){.isa = gravity_class_bool, .n = (b)});
 }
+
+bool gravity_value_isa_function(gravity_value_t v) {
+    return VALUE_ISA_FUNCTION(v);
+}
+
+bool gravity_value_isa_instance(gravity_value_t v) {
+    return VALUE_ISA_INSTANCE(v);
+}
+
+bool gravity_value_isa_closure(gravity_value_t v) {
+    return VALUE_ISA_CLOSURE(v);
+}
+
+bool gravity_value_isa_fiber(gravity_value_t v) {
+    return VALUE_ISA_FIBER(v);
+}
+
+bool gravity_value_isa_class(gravity_value_t v) {
+    return VALUE_ISA_CLASS(v);
+}
+
+bool gravity_value_isa_string(gravity_value_t v) {
+    return VALUE_ISA_STRING(v);
+}
+
+bool gravity_value_isa_int(gravity_value_t v) {
+    return VALUE_ISA_INT(v);
+}
+
+bool gravity_value_isa_float(gravity_value_t v) {
+    return VALUE_ISA_FLOAT(v);
+}
+
+bool gravity_value_isa_bool(gravity_value_t v) {
+    return VALUE_ISA_BOOL(v);
+}
+
+bool gravity_value_isa_list(gravity_value_t v) {
+    return VALUE_ISA_LIST(v);
+}
+
+bool gravity_value_isa_map(gravity_value_t v) {
+    return VALUE_ISA_MAP(v);
+}
+
+bool gravity_value_isa_range(gravity_value_t v) {
+    return VALUE_ISA_RANGE(v);
+}
+
+bool gravity_value_isa_basic_type(gravity_value_t v) {
+    return (VALUE_ISA_STRING(v) || VALUE_ISA_INT(v) || VALUE_ISA_FLOAT(v) || VALUE_ISA_BOOL(v));
+}
+
+bool gravity_value_isa_nullclass(gravity_value_t v) {
+    return VALUE_ISA_NULLCLASS(v);
+}
+
+bool gravity_value_isa_null(gravity_value_t v) {
+    return VALUE_ISA_NULL(v);
+}
+
+bool gravity_value_isa_undefined(gravity_value_t v) {
+    return VALUE_ISA_UNDEFINED(v);
+}
+
+bool gravity_value_isa_callable(gravity_value_t v) {
+    return (VALUE_ISA_FUNCTION(v) || VALUE_ISA_CLASS(v) || VALUE_ISA_FIBER(v));
+}
+
+bool gravity_value_isa_valid(gravity_value_t v) {
+    return VALUE_ISA_VALID(v);
+}
+
+bool gravity_value_isa_notvalid(gravity_value_t v) {
+    return VALUE_ISA_NOTVALID(v);
+}
+
+bool gravity_value_isa_error(gravity_value_t v) {
+    return VALUE_ISA_ERROR(v);
+}
